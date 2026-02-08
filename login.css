@@ -6,6 +6,33 @@ body {
   align-items: center;
   height: 100vh;
 }
+@media (max-width: 768px) {
+
+  body {
+    padding: 20px; /* prevents edge touching */
+  }
+
+  .login-container {
+    width: 100%;
+    max-width: 320px;
+    padding: 15px;
+  }
+
+  .login-container h2 {
+    font-size: 20px;
+  }
+
+  .login-container input,
+  .login-container select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .login-container button {
+    width: 100%;
+    font-size: 15px;
+  }
+}
 
 
 .login-container {
@@ -93,7 +120,7 @@ body {
   100% { background-position: 0% 50%; }
 }
 body {
-  background-image: url("gce.jpeg");  /* path to your image */
+  background-image: url("college.jpg.jpeg");  /* path to your image */
   background-size: cover;       /* fills screen */
   background-position: center;  
   background-repeat: no-repeat;
