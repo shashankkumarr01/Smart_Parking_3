@@ -1,188 +1,98 @@
 
+/* ===================== */
+/* Base / Reset */
+/* ===================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+}
+
+/* ===================== */
+/* Header */
+/* ===================== */
 .dashboard-header {
-    background: white;
-    border-bottom: 1px solid #e5e7eb;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    padding: 5px 0;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 12px 0;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.header-left h1 {
-    font-size: 24px;
-    margin-bottom: 4px;
-}
-
-.header-left p {
-    font-size: 14px;
-    color: #6b7280;
-}
-
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.user-info {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.user-details {
-    text-align: right;
-}
-
-.user-name-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 4px;
-}
-
-.user-name-row i {
-    color: #6b7280;
-    font-size: 14px;
-}
-
-.user-name-row span {
-    font-weight: 500;
-}
-
-.user-details p {
-    font-size: 14px;
-    color: #6b7280;
-}
-
-.badge {
-    background: #dbeafe;
-    color: #1e40af;
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.badge.staff {
-    background: #2563eb;
-    color: white;
-}
-
-/* Dashboard Content */
-.dashboard-content {
-    padding: 32px 24px;
-}
-
-/* College Banner */
-.college-banner {
-    position: relative;
-    height: 300px;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 24px;
-}
-
-.college-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.banner-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 32px;
-    color: white;
-}
-
-.banner-overlay h2 {
-    font-size: 32px;
-    margin-bottom: 8px;
-}
-
-.banner-overlay p {
-    font-size: 18px;
-}
-
-/* Stats Grid */
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 24px;
-    margin-bottom: 24px;
-}
-
-.stat-card {
-    background: rgb(97, 190, 128);
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 1px 3px rgba(4, 117, 192, 0.1);
-}
-
-.stat-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #c25db4;
-}
-
-.stat-header i {
-    font-size: 18px;
-}@media (max-width: 768px) {
-
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .college-banner img {
-    height: 180px;
-    object-fit: cover;
-  }
-
-  .dashboard-header h1 {
-    font-size: 20px;
-  }
-}/* Header layout */
-/* Header bar */
-.dashboard-header {
-  background: #b4b4c9;
-  padding: 15px 25px;
-}
-
-/* Flex container */
-.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-/* Login button style */
+.header-left h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.header-left p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 4px 0 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-details {
+  text-align: right;
+}
+
+.user-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-name-row i {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.user-details p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.badge {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.badge.staff {
+  background: #2563eb;
+  color: white;
+}
+
 .login-btn {
   background: #4CAF50;
   color: white;
@@ -196,201 +106,131 @@
 .login-btn:hover {
   background: #45a049;
 }
-.dashboard-header {
-    background: white;
-    border-bottom: 1px solid #e5e7eb;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    padding: 5px 0;
-}
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.header-left h1 {
-    font-size: 24px;
-    margin-bottom: 4px;
-}
-
-.header-left p {
-    font-size: 14px;
-    color: #6b7280;
-}
-
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.user-info {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.user-details {
-    text-align: right;
-}
-
-.user-name-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 4px;
-}
-
-.user-name-row i {
-    color: #6b7280;
-    font-size: 14px;
-}
-
-.user-name-row span {
-    font-weight: 500;
-}
-
-.user-details p {
-    font-size: 14px;
-    color: #6b7280;
-}
-
-.badge {
-    background: #dbeafe;
-    color: #1e40af;
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.badge.staff {
-    background: #2563eb;
-    color: white;
-}
-
+/* ===================== */
 /* Dashboard Content */
+/* ===================== */
 .dashboard-content {
-    padding: 32px 24px;
+  padding: 32px 24px;
 }
 
+/* ===================== */
 /* College Banner */
+/* ===================== */
 .college-banner {
-    position: relative;
-    height: 300px;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 24px;
+  position: relative;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 24px;
 }
 
 .college-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .banner-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 32px;
-    color: white;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px;
+  color: white;
 }
 
 .banner-overlay h2 {
-    font-size: 32px;
-    margin-bottom: 8px;
+  font-size: 32px;
+  margin: 0 0 8px;
 }
 
 .banner-overlay p {
-    font-size: 18px;
+  font-size: 18px;
+  margin: 0;
 }
 
+/* ===================== */
 /* Stats Grid */
+/* ===================== */
 .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 24px;
-    margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
 }
 
 .stat-card {
-    background: rgb(97, 190, 128);
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 1px 3px rgba(4, 117, 192, 0.1);
+  background: rgb(97, 190, 128);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(4, 117, 192, 0.1);
 }
 
 .stat-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #c25db4;
-}
-
-.stat-header i {
-    font-size: 18px;
-}@media (max-width: 768px) {
-
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .college-banner img {
-    height: 180px;
-    object-fit: cover;
-  }
-
-  .dashboard-header h1 {
-    font-size: 20px;
-  }
-}/* Header layout */
-/* Header bar */
-.dashboard-header {
-  background: #b4b4c9;
-  padding: 15px 25px;
-}
-
-/* Flex container */
-.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #c25db4;
 }
 
-/* Login button style */
-.login-btn {
-  background: #4CAF50;
-  color: white;
-  padding: 10px 22px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: bold;
+.stat-header i {
+  font-size: 18px;
 }
 
-.login-btn:hover {
-  background: #45a049;
+/* ===================== */
+/* Mobile / Tablet */
+/* ===================== */
+@media (max-width: 768px) {
 
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .user-details {
+    text-align: left;
+  }
+
+  .dashboard-content {
+    padding: 16px;
+  }
+
+  .college-banner {
+    height: 180px;
+  }
+
+  .banner-overlay {
+    padding: 16px;
+  }
+
+  .banner-overlay h2 {
+    font-size: 20px;
+  }
+
+  .banner-overlay p {
+    font-size: 14px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+
+  .login-btn {
+    width: 100%;
+    text-align: center;
+  }
 }
